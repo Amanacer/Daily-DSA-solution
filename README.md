@@ -62,28 +62,6 @@ Daily-DSA-Solution/
 
 ---
 
-### 🧠 Sample Problem Approach
-
-```java
-// ✅ Leetcode: Path Sum III
-// 🔍 DFS + Prefix Sum + HashMap
-public class Solution {
-    public int pathSum(TreeNode root, int targetSum) {
-        Map<Long, Integer> map = new HashMap<>();
-        map.put(0L, 1);
-        return dfs(root, 0, targetSum, map);
-    }
-    
-    private int dfs(TreeNode node, long sum, int k, Map<Long, Integer> map) {
-        if (node == null) return 0;
-        sum += node.val;
-        int count = map.getOrDefault(sum - k, 0);
-        map.put(sum, map.getOrDefault(sum, 0) + 1);
-        count += dfs(node.left, sum, k, map) + dfs(node.right, sum, k, map);
-        map.put(sum, map.get(sum) - 1);
-        return count;
-    }
-}
 🧮 GitHub Stats
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=Amanacer&show_icons=true&theme=tokyonight" width="47%"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=Amanacer&theme=tokyonight" width="47%"> </p>
 
