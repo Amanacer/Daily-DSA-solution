@@ -1,3 +1,4 @@
+//AMAZON OA SOLUTION IN MOST O(N) TIME COMPLEXITY
 import java.util.*;
 
 public class MinTotalVariance {
