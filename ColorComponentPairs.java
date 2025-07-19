@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class ColorComponentPairs {
     static long c = 0; // current component ka size
 
